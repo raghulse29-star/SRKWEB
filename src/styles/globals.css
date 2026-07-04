@@ -1,0 +1,251 @@
+@import 'tailwindcss';
+
+/* ==========================================================================
+   GLOBAL DESIGN TOKENS — the "super structure".
+   This @theme block is the SINGLE source of truth for the site's look.
+   Swap these values to match the Figma export and the whole site re-themes.
+   Tailwind v4 turns each token into a utility (e.g. --color-primary -> bg-primary).
+   ========================================================================== */
+@theme {
+  /* ---- Brand colors (from Srikumaran Roofing & Construction Figma) ---- */
+  --color-primary: #1b2c35; /* dark slate-navy — logo mark, dark sections, footer */
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #2a3f4a; /* lighter slate — secondary dark surfaces */
+  --color-secondary-foreground: #ffffff;
+  --color-accent: #c0573f; /* terracotta/clay red — CTAs, icons, stats, stars */
+  --color-accent-foreground: #ffffff;
+
+  /* ---- Neutrals ---- */
+  --color-background: #ffffff;
+  --color-foreground: #1b2c35;
+  --color-muted: #f6f4f1; /* warm off-white section backgrounds */
+  --color-muted-foreground: #5f6b72;
+  --color-card: #ffffff;
+  --color-card-foreground: #1b2c35;
+  --color-border: #e7e2db;
+  --color-input: #d9d3ca;
+  --color-ring: #c0573f;
+
+  /* ---- Semantic states ---- */
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-destructive: #dc2626;
+
+  /* ---- Typography ---- */
+  /* Font families are wired via next/font in layout.tsx (CSS vars below). */
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-heading), var(--font-body), ui-sans-serif, sans-serif;
+
+  /* ---- Radii ---- */
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  /* ---- Shadows ---- */
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-lifted: 0 10px 25px -5px rgb(0 0 0 / 0.12), 0 8px 10px -6px rgb(0 0 0 / 0.08);
+
+  /* ---- Layout ---- */
+  --container-max: 80rem; /* 1280px max content width */
+}
+
+/* ==========================================================================
+   BASE LAYER — element-level defaults built on the tokens above.
+   ========================================================================== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  html, body {
+    /* Safety net: never allow accidental horizontal scroll on small devices. */
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Media never overflows its container on small screens. */
+  img, svg, video, canvas, iframe {
+    max-width: 100%;
+  }
+
+  /* Long words / URLs wrap instead of forcing horizontal scroll. */
+  h1, h2, h3, p {
+    overflow-wrap: break-word;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--color-primary);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Visible focus ring for keyboard users (accessibility). */
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+  }
+
+  /* Respect reduced-motion preference. */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ==========================================================================
+   COMPONENT HELPERS — small shared utilities used across sections.
+   ========================================================================== */
+@layer components {
+  /* ----------------------------------------------------------------------
+     TYPOGRAPHY SYSTEM — the single, constant type scale for the whole site.
+     Each size auto-adjusts between mobile and desktop via clamp(min, fluid, max).
+     Use these classes for ALL headings/eyebrows/body text instead of ad-hoc
+     `text-[..px]` sizes. Apply color/margins with normal Tailwind classes.
+       .eyebrow         small uppercase label above a heading
+       .heading-hero    page hero <h1>
+       .heading-section section <h2>
+       .heading-card    card/sub <h3>
+       .lead            intro paragraph under a heading
+       .body-text       standard paragraph
+     ---------------------------------------------------------------------- */
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: clamp(0.6875rem, 1.2vw, 0.75rem); /* 11 → 12px */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    line-height: 1.4;
+  }
+  .heading-hero {
+    font-family: var(--font-display);
+    font-size: clamp(1.875rem, 4.2vw, 3.25rem); /* 30 → 52px */
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+  }
+  .heading-section {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2.125rem); /* 24 → 34px */
+    font-weight: 800;
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+  }
+  .heading-card {
+    font-family: var(--font-display);
+    font-size: clamp(1.0625rem, 1.4vw, 1.25rem); /* 17 → 20px */
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .lead {
+    font-family: var(--font-sans);
+    font-size: clamp(0.9375rem, 1.1vw, 1.0625rem); /* 15 → 17px */
+    line-height: 1.65;
+  }
+  .body-text {
+    font-family: var(--font-sans);
+    font-size: clamp(0.875rem, 1vw, 0.9375rem); /* 14 → 15px */
+    line-height: 1.65;
+  }
+
+  /* ----------------------------------------------------------------------
+     MOTION SYSTEM — professional page transitions + scroll reveals.
+     Zero-dependency: driven by src/app/template.tsx (adds `js` to <html>,
+     observes [data-reveal] and toggles .is-revealed via IntersectionObserver).
+
+     Usage:
+       data-reveal            fade + rise (default)
+       data-reveal="left"     slide in from the left
+       data-reveal="right"    slide in from the right
+       data-reveal="zoom"     subtle scale-up
+       style="--reveal-order: n"   stagger siblings (n × 90ms delay)
+
+     Safety: hidden states only apply when JS is running (html.js) AND the
+     user has not requested reduced motion — content is always visible
+     otherwise (no-JS browsers, crawlers, accessibility settings).
+     ---------------------------------------------------------------------- */
+  @media (prefers-reduced-motion: no-preference) {
+    /* Whole-page entrance on every navigation (template.tsx remounts). */
+    .page-enter {
+      animation: page-enter 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    html.js [data-reveal] {
+      opacity: 0;
+      transform: translateY(28px);
+      transition:
+        opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      transition-delay: calc(var(--reveal-order, 0) * 90ms);
+    }
+    html.js [data-reveal='left'] { transform: translateX(-36px); }
+    html.js [data-reveal='right'] { transform: translateX(36px); }
+    html.js [data-reveal='zoom'] { transform: scale(0.95); }
+
+    html.js [data-reveal].is-revealed {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes page-enter {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* Hide the scrollbar on horizontal sliders while keeping them scrollable. */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Rich-text wrapper for Markdown-rendered content (blog/service detail). */
+  .prose-content {
+    color: var(--color-foreground);
+    line-height: 1.75;
+  }
+  .prose-content h2 { font-size: 1.75rem; margin: 2rem 0 1rem; }
+  .prose-content h3 { font-size: 1.375rem; margin: 1.5rem 0 0.75rem; }
+  .prose-content p { margin: 0 0 1.25rem; }
+  .prose-content ul { list-style: disc; padding-left: 1.5rem; margin: 0 0 1.25rem; }
+  .prose-content ol { list-style: decimal; padding-left: 1.5rem; margin: 0 0 1.25rem; }
+  .prose-content li { margin: 0.375rem 0; }
+  .prose-content a { color: var(--color-accent); text-decoration: underline; }
+  .prose-content img { border-radius: var(--radius-lg); margin: 1.5rem 0; }
+  .prose-content blockquote {
+    border-left: 4px solid var(--color-accent);
+    padding-left: 1rem;
+    color: var(--color-muted-foreground);
+    font-style: italic;
+    margin: 1.5rem 0;
+  }
+}

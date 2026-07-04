@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Srikumaran R.",
+    "role": "Founder & Managing Director",
+    "bio": "Over 20 years in roofing and construction, leading SRK with a focus on quality and integrity.",
+    "photo": "/images/team/founder.jpg"
+  },
+  {
+    "name": "Maria Lopez",
+    "role": "Operations Manager",
+    "bio": "Keeps every project on schedule and on budget, from first quote to final handover.",
+    "photo": "/images/team/operations.jpg"
+  },
+  {
+    "name": "David Chen",
+    "role": "Lead Roofing Specialist",
+    "bio": "A master roofer with deep expertise across metal, shingle, and flat roofing systems.",
+    "photo": "/images/team/roofing-lead.jpg"
+  },
+  {
+    "name": "Aisha Khan",
+    "role": "Project Manager",
+    "bio": "Your single point of contact, coordinating trades and keeping you informed at every step.",
+    "photo": "/images/team/project-manager.jpg"
+  }
+]
