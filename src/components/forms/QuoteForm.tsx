@@ -4,9 +4,9 @@ import { Button } from '@/components/ui/Button';
 import { Input, Label, Select, Textarea } from '@/components/ui/Input';
 import { useNetlifyForm } from './useNetlifyForm';
 
-/** Quote-request form wired to Netlify Forms (form name: "quote"). */
+/** Quote-request form — emails the request via the serverless SMTP mailer. */
 export function QuoteForm({ services }: { services: Array<{ slug: string; title: string }> }) {
-  const { status, handleSubmit } = useNetlifyForm();
+  const { status, handleSubmit } = useNetlifyForm('/api/send-mail');
 
   if (status === 'success') {
     return (
@@ -18,14 +18,7 @@ export function QuoteForm({ services }: { services: Array<{ slug: string; title:
   }
 
   return (
-    <form
-      name="quote"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      onSubmit={handleSubmit}
-      className="space-y-5"
-    >
+    <form name="quote" method="POST" onSubmit={handleSubmit} className="space-y-5">
       <input type="hidden" name="form-name" value="quote" />
       <p className="hidden">
         <label>

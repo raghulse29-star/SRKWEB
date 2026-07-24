@@ -12,10 +12,11 @@ function encode(data: FormData): string {
 }
 
 /**
- * Shared submit handler for Netlify Forms on a static site.
- * POSTs the form (including its `form-name`) to "/" as urlencoded data.
+ * Shared submit handler for form POSTs on a static site.
+ * Both site forms pass "/api/send-mail" — the serverless function that
+ * relays the submission as an email via Gmail SMTP.
  */
-export function useNetlifyForm() {
+export function useNetlifyForm(endpoint = '/') {
   const [status, setStatus] = useState<Status>('idle');
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -23,7 +24,7 @@ export function useNetlifyForm() {
     const form = e.currentTarget;
     setStatus('submitting');
     try {
-      const res = await fetch('/', {
+      const res = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode(new FormData(form)),

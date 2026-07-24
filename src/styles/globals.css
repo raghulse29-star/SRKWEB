@@ -60,8 +60,12 @@
   }
 
   html, body {
-    /* Safety net: never allow accidental horizontal scroll on small devices. */
+    /* Safety net: never allow accidental horizontal scroll on small devices.
+       `clip` (not `hidden`) — hidden creates a scroll container on <body>,
+       which silently breaks the sticky header. clip blocks overflow without
+       that side effect; the hidden line is a fallback for old browsers. */
     overflow-x: hidden;
+    overflow-x: clip;
     max-width: 100%;
   }
 

@@ -40,7 +40,8 @@ const fieldClass =
 
 export function ContactSection() {
   const [budget, setBudget] = useState(budgets[2]);
-  const { status, handleSubmit } = useNetlifyForm();
+  // Submits to the serverless mailer, which emails the inquiry via Gmail SMTP.
+  const { status, handleSubmit } = useNetlifyForm('/api/send-mail');
 
   return (
     <section className="w-full bg-white py-12 lg:py-16 font-sans">
@@ -76,8 +77,8 @@ export function ContactSection() {
         {/* Right: Form */}
         <div className="rounded-[20px] bg-white p-8 shadow-[0_20px_50px_rgba(0,0,0,0.08)] sm:p-10" data-reveal="right">
           <form name="contact" onSubmit={handleSubmit} className="space-y-6">
-            {/* Netlify Forms plumbing: form identity + honeypot spam trap.
-                Field names must match public/__forms.html. */}
+            {/* form-name tells the mailer which form this is; the hidden
+                bot-field is a honeypot spam trap. */}
             <input type="hidden" name="form-name" value="contact" />
             <p hidden aria-hidden="true">
               <label>

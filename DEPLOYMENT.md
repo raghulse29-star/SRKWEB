@@ -18,10 +18,11 @@ hosting free and maintenance nearly zero.
 
 **Recommendation: Netlify.** The repo is already wired for it:
 
-- `netlify.toml` — build command, publish dir, security + caching headers ✅
-- `public/__forms.html` + `useNetlifyForm.ts` — Contact and Quote forms
-  submit to **Netlify Forms** (100 free submissions/month, spam filtering,
-  email notifications). On any other host these forms silently stop working.
+- `netlify.toml` — build command, publish dir, functions, security + caching headers ✅
+- `netlify/functions/send-mail.mjs` — Contact and Quote forms submit to this
+  **Netlify serverless function**, which emails each inquiry via Gmail SMTP
+  (free tier: 125k function calls/month). On a host without an equivalent
+  functions runtime, the forms silently stop working.
 
 ---
 
@@ -72,11 +73,16 @@ A "pipeline" here just means: *push code → site rebuilds → deploys*.
      Just click **Deploy**.
    - ~2 minutes later the site is live at `https://<random-name>.netlify.app`.
 
-3. **Enable form notifications**
-   - Site → **Forms** → confirm `contact` and `quote` forms were detected.
-   - **Forms → Settings → Form notifications → Email** → add the address
-     that should receive enquiries (e.g. info@steppingedge.com).
-   - Turn on spam filtering (Akismet) — it's free and on by default.
+3. **Configure the form mailer (SMTP)**
+   - The contact and quote forms email submissions via a serverless function
+     (`netlify/functions/send-mail.mjs`) using Gmail SMTP.
+   - Site → **Project configuration → Environment variables** → add:
+     - `SMTP_USER` — the Gmail address that sends/receives inquiries
+     - `SMTP_PASS` — a Gmail App Password for that account
+       (create at myaccount.google.com/apppasswords)
+   - Optional: `MAIL_TO` to deliver inquiries to a different inbox.
+   - Redeploy after adding variables. Local values live in `.env` (gitignored)
+     and are only used by `npx netlify dev`.
 
 4. **Custom domain (optional but recommended)**
    - Site → **Domain management → Add a domain** (buy one anywhere, ~₹800–1000/yr).
