@@ -11,7 +11,7 @@ export const siteConfig = {
   legalName: 'Srikumaran Roofing & Construction',
   shortName: 'SRK',
   // Used by metadataBase, canonical URLs, sitemap, and JSON-LD. Update to the real domain.
-  url: 'https://dev.srk.hub29.online',
+  url: 'https://dev.skr.hub29.online',
   description:
     'Srikumaran Roofing & Construction — professional roofing, renovation, and ' +
     'construction services. Quality craftsmanship for residential and commercial projects.',
