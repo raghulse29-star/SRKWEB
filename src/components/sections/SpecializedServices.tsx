@@ -1,48 +1,36 @@
 'use client';
 
 import Link from 'next/link';
-import { Home, Building2, Wrench, Sun, Factory, Compass, ArrowRight } from 'lucide-react';
+import { Factory, Landmark, DraftingCompass, Tractor, ArrowRight } from 'lucide-react';
 
 /* ──────────────────────────────────────────────────────────────────────────
-   SPECIALIZED SERVICES — Exact content and UI match from the design.
+   CORE SERVICES — Exact content and UI match from the design.
    ────────────────────────────────────────────────────────────────────────── */
 
 const services = [
   {
-    icon: Home,
-    title: 'Residential Projects',
-    description:
-      'Bespoke roofing designs for high-end homes using slate, tile, and premium asphalt shingles.',
-  },
-  {
-    icon: Building2,
-    title: 'Commercial Projects',
-    description:
-      'Scalable and durable solutions for industrial complexes, warehouses, and office buildings.',
-  },
-  {
-    icon: Wrench,
-    title: 'Roof Maintenance',
-    description:
-      "Comprehensive inspection and maintenance programs to extend your roof's lifespan.",
-  },
-  {
-    icon: Sun,
-    title: 'Solar Integrated',
-    description:
-      'Seamless integration of solar panels with new or existing roofing structures.',
-  },
-  {
     icon: Factory,
-    title: 'Metal Systems',
+    title: 'Industrial Roofing Systems',
     description:
-      'Architectural metal roofing providing maximum durability and modern aesthetic appeal.',
+      'PEB structures, sheet roofing, warehouse roofing, and factory roofing systems.',
   },
   {
-    icon: Compass,
-    title: 'Custom Fabrication',
+    icon: Landmark,
+    title: 'Civil Construction',
     description:
-      'In-house workshop for custom guttering, flashing, and decorative roof elements.',
+      'Industrial buildings, service centers, foundations, and compound works.',
+  },
+  {
+    icon: DraftingCompass,
+    title: 'Structural Fabrication',
+    description:
+      'Steel structures, trusses, industrial sheds, and structural platforms.',
+  },
+  {
+    icon: Tractor,
+    title: 'Earthmoving & Site Development',
+    description:
+      'Land clearing, leveling, excavation, and foundation preparation.',
   },
 ];
 
@@ -57,12 +45,12 @@ export function SpecializedServices() {
             Our Expertise
           </p>
           <h2 className="heading-section mt-4 text-[#0A111A]">
-            Specialized Services
+            Our Core Services
           </h2>
         </div>
 
         {/* Services Grid */}
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { ProjectsHero } from '@/components/sections/projects/ProjectsHero';
+import { IndustrialLandmarks } from '@/components/sections/about/IndustrialLandmarks';
 import { FeaturedProjects } from '@/components/sections/projects/FeaturedProjects';
 import { ProjectHighlight } from '@/components/sections/projects/ProjectHighlight';
 import { Walkthroughs } from '@/components/sections/projects/Walkthroughs';
@@ -22,6 +23,7 @@ export default function ProjectsPage() {
   return (
     <>
       <ProjectsHero />
+      <IndustrialLandmarks />
       <FeaturedProjects />
       <ProjectHighlight />
       <Walkthroughs />

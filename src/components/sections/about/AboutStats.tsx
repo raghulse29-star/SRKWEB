@@ -3,9 +3,9 @@
    ────────────────────────────────────────────────────────────────────────── */
 
 const stats = [
-  { value: '25+', label: 'Years of Experience' },
+  { value: '30+', label: 'Years of Experience' },
   { value: '1.2k+', label: 'Projects Completed' },
-  { value: '150+', label: 'Expert Team Members' },
+  { value: '150+', label: 'Expert Artisans' },
   { value: '99%', label: 'Client Satisfaction' },
 ];
 

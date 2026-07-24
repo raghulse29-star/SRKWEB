@@ -25,12 +25,12 @@ export function Hero() {
       <Container className="relative z-10">
         <div className="max-w-3xl">
           <h1 data-reveal className="heading-hero text-white">
-            Building Strong Roofs.<br />
-            Building Stronger <br />
-            Trust.
+            Building Industrial<br />
+            Strength for Over<br />
+            30 Years.
           </h1>
           <p data-reveal style={{ '--reveal-order': 1 } as React.CSSProperties} className="lead mt-6 max-w-2xl text-gray-200">
-            Premium roofing solutions for high-end residential and commercial estates. Architectural integrity meets aesthetic excellence.
+            Specialists in industrial roofing, civil construction, structural fabrication, and earthmoving solutions. Based in Ranipet District, we deliver projects across Tamil Nadu with a strong commitment to quality and reliability.
           </p>
 
           <div data-reveal style={{ '--reveal-order': 2 } as React.CSSProperties} className="mt-10 flex flex-wrap items-center gap-4">
@@ -57,7 +57,7 @@ export function Hero() {
               <Calendar className="h-8 w-8" strokeWidth={1.5} />
             </div>
             <div>
-              <div className="text-3xl font-bold text-[#1E242B]">15+</div>
+              <div className="text-3xl font-bold text-[#1E242B]">30+</div>
               <div className="mt-0.5 text-[13px] font-medium text-gray-500">Years of Experience</div>
             </div>
           </div>

@@ -48,15 +48,12 @@ export function Legacy() {
             THE SRIKUMARAN LEGACY
           </p>
           <h2 className="heading-section mt-4 text-[#0A111A]">
-            Architectural<br className="hidden sm:block" /> Excellence in Every<br className="hidden sm:block" /> Shingle
+            Three Decades of<br className="hidden sm:block" /> Engineering<br className="hidden sm:block" /> Excellence
           </h2>
 
           <div className="body-text mt-6 space-y-5 text-gray-600">
             <p>
-              Srikumaran Roofing & Construction was founded with a vision to deliver reliable, high-quality roofing and construction solutions. With over 25 years of experience, we have built a strong reputation for excellence, trust, and craftsmanship across residential, commercial, and industrial projects.
-            </p>
-            <p>
-              We believe every project is more than just a structure—it's an investment in the future. By combining quality materials, skilled workmanship, and a customer-first approach, we transform ideas into durable and lasting spaces that stand the test of time.
+              Srikumaran Roofing and Construction is a Tamil Nadu–based industrial construction company with over 30 years of experience delivering durable, cost-effective, and technically sound infrastructure solutions. From large-scale industrial roofing systems to complete civil construction and fabrication works, every project is executed with precision, strict quality control, and a commitment to timelines.
             </p>
           </div>
 

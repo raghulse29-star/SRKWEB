@@ -1,6 +1,7 @@
 import { Hero } from '@/components/sections/Hero';
 import { Legacy } from '@/components/sections/Legacy';
 import { SpecializedServices } from '@/components/sections/SpecializedServices';
+import { WhyChooseUs } from '@/components/sections/WhyChooseUs';
 import { Masterpieces } from '@/components/sections/Masterpieces';
 import { SuccessStories } from '@/components/sections/SuccessStories';
 import { PricingPlans } from '@/components/sections/PricingPlans';
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Hero />
       <Legacy />
       <SpecializedServices />
+      <WhyChooseUs />
       <Masterpieces />
       <SuccessStories />
       <PricingPlans />

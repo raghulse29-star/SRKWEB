@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import { AboutHero } from '@/components/sections/about/AboutHero';
 import { AboutStats } from '@/components/sections/about/AboutStats';
+import { CompanyOverview } from '@/components/sections/about/CompanyOverview';
+import { FounderMessage } from '@/components/sections/about/FounderMessage';
+import { IndustrialLandmarks } from '@/components/sections/about/IndustrialLandmarks';
 import { Evolution } from '@/components/sections/about/Evolution';
 import { Principles } from '@/components/sections/about/Principles';
 import { Blueprint } from '@/components/sections/about/Blueprint';
@@ -25,7 +28,10 @@ export default function AboutPage() {
     <>
       <AboutHero />
       <AboutStats />
+      <CompanyOverview />
+      <FounderMessage />
       <Evolution />
+      <IndustrialLandmarks />
       <Principles />
       <Blueprint />
       <TeamSection />
