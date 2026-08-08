@@ -1,4 +1,4 @@
-# Deployment Guide — SRK Roofing & Construction
+# Deployment Guide — SKR Roofing & Construction
 
 This site is a **fully static** Next.js 15 export (`output: 'export'` in
 `next.config.mjs`). `npm run build` produces plain HTML/CSS/JS in `out/` —
@@ -59,7 +59,7 @@ A "pipeline" here just means: *push code → site rebuilds → deploys*.
    git add .
    git commit -m "Initial site"
    # create an empty repo on github.com, then:
-   git remote add origin https://github.com/<your-user>/srk-construction.git
+   git remote add origin https://github.com/<your-user>/skr-construction.git
    git branch -M main
    git push -u origin main
    ```

@@ -7,19 +7,18 @@ import { Container } from '@/components/ui/Container';
 
 export function Hero() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#0A111A] pt-16 pb-12 lg:pt-24 lg:pb-16">
+    <section className="relative w-full overflow-hidden bg-[#0A111A] pt-14 pb-10 lg:pt-20 lg:pb-14">
       {/* Background Image Setup */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/img1.png" // Keep your placeholder or update path
+          src="/images/img1.webp" // Keep your placeholder or update path
           alt="Building construction site"
           fill
           className="object-cover object-center"
           priority
         />
-        {/* Dark overlay gradient to ensure text readability matching the image */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0A111A]/80 via-[#0A111A]/50 to-transparent" />
-        <div className="absolute inset-0 bg-black/20 mix-blend-multiply" />
+        {/* Lightened overlay gradient — just enough for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A111A]/65 via-[#0A111A]/30 to-transparent" />
       </div>
 
       <Container className="relative z-10">

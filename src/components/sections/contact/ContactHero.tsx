@@ -8,19 +8,19 @@ import Image from 'next/image';
 
 export function ContactHero() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#0A111A] pt-20 pb-14 lg:pt-28 lg:pb-20 font-sans">
-      
+    <section className="relative w-full overflow-hidden bg-[#0A111A] pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-36 lg:pb-24 font-sans">
+
       {/* Background Image & Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/contact-hero.jpg" // Ensure this matches your public path
+          src="/images/img1.webp" // Ensure this matches your public path
           alt="Metal roof structure against twilight sky"
           fill
           className="object-cover object-center"
           priority
         />
         {/* Subtle gradient to ensure text readability against the twilight sky */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0A111A]/90 via-[#0A111A]/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0A111A]/70 via-[#0A111A]/25 to-transparent" />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-8">

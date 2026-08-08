@@ -23,7 +23,7 @@ export function Legacy() {
         <div className="relative pb-12 lg:pb-0 lg:pr-8" data-reveal="left">
           <div className="relative aspect-[4/5] w-full lg:w-[95%] overflow-hidden rounded-xl bg-gradient-to-br from-[#2a3f4a] to-[#0A111A] shadow-lg">
             <Image
-              src="/images/legacy.jpg" // Update this path to your actual image
+              src="/images/legacy.webp" // Update this path to your actual image
               alt="Premium residential roofing at dusk"
               fill
               className="object-cover"

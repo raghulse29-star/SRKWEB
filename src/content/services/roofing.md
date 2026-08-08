@@ -23,7 +23,7 @@ systems, and back every job with a clear warranty.
 - Gutter, fascia, and soffit work
 - Routine inspections and maintenance plans
 
-### Why choose SRK for roofing
+### Why choose SKR for roofing
 
 Every project starts with a free inspection and a detailed, fixed quote — no surprises.
 Our installers are fully insured, and we leave the site clean at the end of every day.

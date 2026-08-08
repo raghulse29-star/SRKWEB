@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Globe, ThumbsUp, Share2 } from 'lucide-react';
+import { siteConfig } from '@/lib/site';
 
 /* ──────────────────────────────────────────────────────────────────────────
    FOOTER — Exact layout, content, and styling match from the design.
@@ -19,7 +20,7 @@ const legalLinks = [
   { label: 'Privacy Policy', href: '/privacy' },
   { label: 'Terms of Service', href: '/terms' },
   { label: 'Cookie Policy', href: '/cookies' },
-  { label: 'Sitemap', href: '/sitemap' },
+  // { label: 'Sitemap', href: '/sitemap' },
 ];
 
 export function Footer() {
@@ -76,15 +77,15 @@ export function Footer() {
               <li className="flex items-start gap-4">
                 <MapPin className="mt-1 h-5 w-5 flex-shrink-0 text-[#CF5B4B]" strokeWidth={1.5} />
                 <span className="leading-relaxed">
-                  123 Architectural Way,<br />
-                  Construction District, TN<br />
-                  600001
+                  {siteConfig.contact.address.street},<br />
+                  {siteConfig.contact.address.locality}, {siteConfig.contact.address.region}<br />
+                  {siteConfig.contact.address.postalCode}
                 </span>
               </li>
               <li className="flex items-center gap-4">
                 <Phone className="h-5 w-5 flex-shrink-0 text-[#CF5B4B]" strokeWidth={1.5} />
-                <a href="tel:+914423456789" className="transition-colors hover:text-[#CF5B4B]">
-                  +91 (44) 2345-6789
+                <a href={siteConfig.contact.phoneHref} className="transition-colors hover:text-[#CF5B4B]">
+                  {siteConfig.contact.phone}
                 </a>
               </li>
               <li className="flex items-center gap-4">

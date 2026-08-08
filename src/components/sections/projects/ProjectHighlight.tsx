@@ -59,8 +59,8 @@ export function ProjectHighlight() {
         {/* Before / After comparison — drag the center bar to compare */}
         <div data-reveal="right" className="aspect-[4/3] w-full overflow-hidden rounded-[20px] shadow-2xl">
           <BeforeAfterSlider
-            before="/images/ph22.png"
-            after="/images/ph21.png"
+            before="/images/ph21.webp"
+            after="/images/ph22.webp"
             beforeAlt="Heritage Manor roof before restoration"
             afterAlt="Heritage Manor roof after restoration"
             className="h-full w-full"

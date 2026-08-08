@@ -1,4 +1,4 @@
-# SRK Construction — Website
+# SKR Construction — Website
 
 Static service & showcase website for **Srikumaran Roofing & Construction**, built with
 **Next.js (App Router) static export** and **Tailwind CSS v4**. SEO-optimized, deploys to
@@ -96,7 +96,7 @@ Push to a Git repo connected to Netlify. `netlify.toml` sets `command = npm run 
 ## TODO before launch
 
 - [ ] Replace placeholder brand details in `src/lib/site.ts` (domain, phone, address, hours, social)
-- [ ] Add real logo (`public/images/logo.*`) + replace the `SRK` text mark in Header/Footer
+- [ ] Add real logo (`public/images/logo.*`) + replace the `SKR` text mark in Header/Footer
 - [ ] Add real photography to `public/images/`, then set `ASSETS_READY = true`
 - [ ] Apply final Figma design tokens to `globals.css`
 - [ ] Add a 1200×630 OG image at `public/images/og-default.jpg`

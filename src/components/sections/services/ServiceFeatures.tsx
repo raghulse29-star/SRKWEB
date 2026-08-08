@@ -23,7 +23,7 @@ const features: Feature[] = [
   {
     eyebrow: 'RESIDENTIAL & COMMERCIAL',
     title: 'Advanced Roofing Solutions',
-    image: '/images/ph15.webp',
+    image: '/images/ph151.webp',
     description:
       'We specialize in durable and reliable roofing systems for residential, commercial, and industrial buildings. Our roofing solutions are designed to provide superior protection, weather resistance, and long-term performance while enhancing the overall value of your property.',
     bullets: [
@@ -38,7 +38,7 @@ const features: Feature[] = [
   {
     eyebrow: 'STRUCTURAL INTEGRITY',
     title: 'Civil & Structural Engineering',
-    image: '/images/ph14.webp',
+    image: '/images/ph15.webp',
     description:
       'Our engineering team manages core structural works for both private residential developments and public infrastructure. We ensure that every foundation and beam meets the highest safety standards, handling large-scale commercial civil projects with technical mastery and precision.',
     bullets: [
@@ -52,7 +52,7 @@ const features: Feature[] = [
   {
     eyebrow: 'MAINTENANCE & ALTERATIONS',
     title: 'Water Leakage Repairs & Building Alterations',
-    image: '/images/ph13.webp',
+    image: '/images/ph222.webp',
     description:
       'Protect your property from water damage, seepage, and structural deterioration. We provide expert leakage repair, waterproofing, and building alteration services to restore strength, safety, and long-term durability.',
     stats: [

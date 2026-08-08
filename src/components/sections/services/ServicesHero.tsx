@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 export function ServicesHero() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#0A111A] pt-20 pb-14 lg:pt-28 lg:pb-20 font-sans">
+    <section className="relative w-full overflow-hidden bg-[#0A111A] pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-36 lg:pb-24 font-sans">
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/ph12.webp" // Update with actual image path
@@ -17,8 +17,8 @@ export function ServicesHero() {
           className="object-cover object-center"
           priority
         />
-        {/* Deep left-to-right gradient overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#141c2435] via-[#141C24]/85 to-[#141C24]/20" />
+        {/* Lightened left-to-right gradient overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#141c2420] via-[#141C24]/60 to-[#141C24]/10" />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-8">

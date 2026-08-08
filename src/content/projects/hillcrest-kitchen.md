@@ -11,7 +11,7 @@ gallery:
   - /images/projects/kitchen-2.jpg
 featured: false
 seo:
-  description: Hillcrest Kitchen Remodel — open-plan kitchen renovation by SRK Construction.
+  description: Hillcrest Kitchen Remodel — open-plan kitchen renovation by SKR Construction.
 ---
 
 ## Project overview

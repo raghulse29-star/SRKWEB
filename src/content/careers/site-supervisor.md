@@ -5,7 +5,7 @@ location: Your City, ST
 type: Full-time
 summary: Lead crews on residential and commercial projects, ensuring quality, safety, and schedule.
 seo:
-  description: Site Supervisor role at SRK Construction — lead crews and deliver projects safely and on schedule.
+  description: Site Supervisor role at SKR Construction — lead crews and deliver projects safely and on schedule.
 ---
 
 ## About the role

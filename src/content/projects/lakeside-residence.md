@@ -11,7 +11,7 @@ gallery:
   - /images/projects/lakeside-2.jpg
 featured: true
 seo:
-  description: Lakeside Residence — full metal-roof replacement and exterior renovation by SRK Construction.
+  description: Lakeside Residence — full metal-roof replacement and exterior renovation by SKR Construction.
 ---
 
 ## Project overview

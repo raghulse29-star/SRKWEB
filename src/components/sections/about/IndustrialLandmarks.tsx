@@ -12,7 +12,7 @@ const filters = ['All Projects', 'Industrial', 'Commercial'];
 const projects = [
   {
     title: 'Mega Industrial Warehouse',
-    badge: 'Completed',
+    // badge: 'Completed',
     badgeClass: 'bg-[#16A34A]',
     image: '/images/ph14.webp',
     imageFirst: true,
@@ -25,7 +25,7 @@ const projects = [
   },
   {
     title: 'Textile Manufacturing Plant',
-    badge: 'In Progress',
+    // badge: 'In Progress',
     badgeClass: 'bg-[#0A111A]',
     image: '/images/ph15.webp',
     imageFirst: false,
@@ -80,11 +80,11 @@ export function IndustrialLandmarks() {
               {/* Image half */}
               <div className={`relative min-h-[260px] lg:min-h-[320px] ${p.imageFirst ? '' : 'lg:order-2'}`}>
                 <Image src={p.image} alt={p.title} fill className="object-cover" />
-                <span
+                {/* <span
                   className={`absolute right-4 top-4 rounded-full px-4 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white ${p.badgeClass}`}
                 >
                   {p.badge}
-                </span>
+                </span> */}
               </div>
 
               {/* Spec sheet half */}

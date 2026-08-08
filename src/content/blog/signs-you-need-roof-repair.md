@@ -3,7 +3,7 @@ title: 5 Signs You Need a Roof Repair
 slug: signs-you-need-roof-repair
 excerpt: Catching roof problems early saves money. Here are five warning signs worth a closer look.
 date: 2026-03-28
-author: SRK Construction
+author: SKR Construction
 cover: /images/blog/roof-repair.jpg
 tags:
   - roofing

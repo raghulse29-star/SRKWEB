@@ -20,7 +20,7 @@ export function FounderMessage() {
 
         <div data-reveal style={{ '--reveal-order': 2 } as React.CSSProperties}>
           <div className="mx-auto mt-10 h-[3px] w-16 bg-[#B44335]" />
-          <p className="mt-6 text-[17px] font-bold text-white">Srikumaran R.</p>
+          <p className="mt-6 text-[17px] font-bold text-white">R.PURUSHOTHAMAN</p>
           <p className="mt-2 text-[13px] font-semibold uppercase tracking-[0.14em] text-[#D45D53]">
             Founder, Srikumaran Roofing and Construction
           </p>

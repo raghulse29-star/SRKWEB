@@ -21,7 +21,7 @@ const infoCards = [
   {
     icon: MapPin,
     title: 'Our Office',
-    lines: ['123 Industrial Park Way, Suite 400', 'Architectural District, Chennai 600001'],
+    lines: ['21, T.M.N Street, Navalpur', 'Ranipet, Tamil Nadu 632401'],
   },
   {
     icon: Phone,

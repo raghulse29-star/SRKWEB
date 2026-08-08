@@ -7,9 +7,9 @@
  */
 
 export const siteConfig = {
-  name: 'SRK Construction',
+  name: 'SKR Construction',
   legalName: 'Srikumaran Roofing & Construction',
-  shortName: 'SRK',
+  shortName: 'SKR',
   // Used by metadataBase, canonical URLs, sitemap, and JSON-LD. Update to the real domain.
   url: 'https://dev.skr.hub29.online',
   description:
@@ -17,17 +17,19 @@ export const siteConfig = {
     'construction services. Quality craftsmanship for residential and commercial projects.',
   tagline: 'Building with integrity. Roofing that lasts.',
 
-  // TODO(client): confirm real contact details — also feed the LocalBusiness JSON-LD.
+  // TODO(client): confirm remaining contact details — also feed the LocalBusiness JSON-LD.
   contact: {
-    phone: '+1 (000) 000-0000',
-    phoneHref: 'tel:+10000000000',
-    email: 'info@srkconstruction.com',
+    phone: '+91 95971 79615',
+    phoneHref: 'tel:+919597179615',
+    // Digits-only, no "+" — required format for wa.me links.
+    whatsapp: '919597179615',
+    email: 'info@skrconstruction.com',
     address: {
-      street: '123 Builder Avenue',
-      locality: 'Your City',
-      region: 'ST',
-      postalCode: '00000',
-      country: 'US',
+      street: '21, T.M.N Street, Navalpur',
+      locality: 'Ranipet',
+      region: 'TN',
+      postalCode: '632401',
+      country: 'IN',
     },
     // Geo + hours power the LocalBusiness schema; update with real values.
     geo: { latitude: 0, longitude: 0 },

@@ -7,7 +7,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata: Metadata = buildMetadata({
   title: 'Request a Quote',
   description:
-    'Request a free, no-obligation quote from SRK Construction for your roofing, construction, or renovation project.',
+    'Request a free, no-obligation quote from SKR Construction for your roofing, construction, or renovation project.',
   path: '/quote',
 });
 

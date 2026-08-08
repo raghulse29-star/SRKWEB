@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Careers',
-  description: 'Join the SRK Construction team. Explore current openings in roofing and construction.',
+  description: 'Join the SKR Construction team. Explore current openings in roofing and construction.',
   path: '/careers',
 });
 
@@ -19,7 +19,7 @@ export default function CareersPage() {
       <SectionHeading
         centered
         eyebrow="Join us"
-        title="Careers at SRK"
+        title="Careers at SKR"
         lead="We're always looking for skilled, dependable people who take pride in their work."
       />
       <div className="mx-auto mt-12 max-w-3xl space-y-4">

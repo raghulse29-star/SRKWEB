@@ -11,7 +11,7 @@ gallery:
   - /images/projects/office-2.jpg
 featured: true
 seo:
-  description: Downtown Office Fit-Out — two-floor commercial construction project by SRK Construction.
+  description: Downtown Office Fit-Out — two-floor commercial construction project by SKR Construction.
 ---
 
 ## Project overview

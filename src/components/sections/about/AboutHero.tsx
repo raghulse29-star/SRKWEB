@@ -10,9 +10,9 @@ import { ArrowDown } from 'lucide-react';
 
 export function AboutHero() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#0A111A] pt-20 pb-14 lg:pt-28 lg:pb-20 font-sans">
-      
-      {/* Background Image & Exact Gradient Overlay */}
+    <section className="relative w-full overflow-hidden bg-[#0A111A] pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-36 lg:pb-24 font-sans">
+
+      {/* Background Image & Lightened Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/ph7.webp" // Ensure this matches your public folder path
@@ -21,10 +21,10 @@ export function AboutHero() {
           className="object-cover object-center"
           priority
         />
-        Primary rich dark gradient sweeping left to right
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0b141c76] via-[#0B141C]/85 to-transparent" />
-        {/* Secondary subtle top-to-bottom dark vignette to ensure text pops */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0B141C]/40 via-transparent to-transparent" />
+        {/* Primary dark gradient sweeping left to right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0b141c66] via-[#0B141C]/60 to-transparent" />
+        {/* Secondary subtle top-to-bottom vignette to ensure text pops */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B141C]/25 via-transparent to-transparent" />
       </div>
 
       {/* Content Container */}

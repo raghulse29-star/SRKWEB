@@ -8,10 +8,10 @@ import Image from 'next/image';
    ────────────────────────────────────────────────────────────────────────── */
 
 const projects = [
-  { title: 'Glass Tower', category: 'Commercial', image: '/images/ph17.png' },
-  { title: 'Residential Roof', category: 'Residential', image: '/images/ph18.png' },
-  { title: 'Metal System', category: 'Roofing', image: '/images/ph19.png' },
-  { title: 'Brick Structure', category: 'Industrial', image: '/images/ph20.png' },
+  { title: 'Glass Tower', category: 'Commercial', image: '/images/ph17.webp' },
+  { title: 'Residential Roof', category: 'Residential', image: '/images/ph18.webp' },
+  { title: 'Metal System', category: 'Roofing', image: '/images/ph20.webp' },
+  { title: 'Brick Structure', category: 'Industrial', image: '/images/ph19.webp' },
 ];
 
 const categories = ['All Projects', 'Residential', 'Commercial', 'Roofing', 'Industrial'];

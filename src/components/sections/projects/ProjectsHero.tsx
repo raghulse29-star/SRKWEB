@@ -9,9 +9,9 @@ import Link from 'next/link';
 
 export function ProjectsHero() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#0A111A] pt-20 pb-14 lg:pt-28 lg:pb-20 font-sans">
-      
-      {/* Background Image & Gradient Overlay */}
+    <section className="relative w-full overflow-hidden bg-[#0A111A] pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-36 lg:pb-24 font-sans">
+
+      {/* Background Image & Lightened Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/ph16.webp" // Update path as needed
@@ -20,9 +20,9 @@ export function ProjectsHero() {
           className="object-cover object-center"
           priority
         />
-        {/* Dark gradient sweeping from right to left to mimic the sunset effect */}
-        <div className="absolute inset-0 bg-gradient-to-l from-[#0a111a0e] via-[#0A111A]/60 to-[#0A111A]/20" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A111A]/20 to-[#0A111A]/80" />
+        {/* Gradient sweeping from right to left to mimic the sunset effect */}
+        <div className="absolute inset-0 bg-gradient-to-l from-[#0a111a08] via-[#0A111A]/40 to-[#0A111A]/10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A111A]/10 to-[#0A111A]/55" />
       </div>
 
       {/* Content Container */}

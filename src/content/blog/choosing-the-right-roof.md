@@ -3,7 +3,7 @@ title: How to Choose the Right Roof for Your Home
 slug: choosing-the-right-roof
 excerpt: Asphalt, metal, or tile? A practical guide to picking a roofing material that fits your climate, budget, and style.
 date: 2026-05-12
-author: SRK Construction
+author: SKR Construction
 cover: /images/blog/roof-guide.jpg
 tags:
   - roofing

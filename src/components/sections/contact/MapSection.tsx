@@ -13,7 +13,7 @@ import { MapPin, ArrowUpRight } from 'lucide-react';
    the right side of the map.
    ────────────────────────────────────────────────────────────────────────── */
 
-const MAP_QUERY = 'Chennai, Tamil Nadu 600001';
+const MAP_QUERY = '21, T.M.N Street, Navalpur, Ranipet, Tamil Nadu 632401';
 const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(MAP_QUERY)}&z=13&output=embed`;
 const directionsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAP_QUERY)}`;
 
@@ -29,7 +29,8 @@ export function MapSection() {
               src={mapSrc}
               className="absolute inset-0 h-full w-full border-0"
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              referrerPolicy="strict-origin-when-cross-origin"
+              sandbox="allow-scripts allow-same-origin allow-popups"
               allowFullScreen
             />
           </div>

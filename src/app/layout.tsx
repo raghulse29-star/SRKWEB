@@ -4,6 +4,8 @@ import '@/styles/globals.css';
 import { siteConfig } from '@/lib/site';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
+import { BackToTop } from '@/components/ui/BackToTop';
 import { OrganizationJsonLd } from '@/components/seo/JsonLd';
 
 /**
@@ -70,6 +72,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
+        <BackToTop />
+        <WhatsAppButton />
         <OrganizationJsonLd />
       </body>
     </html>
