@@ -121,7 +121,7 @@ export function ContactSection() {
                     key={b}
                     type="button"
                     onClick={() => setBudget(b)}
-                    className={`rounded-md border py-3 text-[13px] font-bold transition-all ${
+                    className={`whitespace-nowrap rounded-md border px-1 py-3 text-[11px] font-bold transition-all sm:text-[13px] ${
                       budget === b
                         ? 'border-[#0A111A] bg-[#0A111A] text-white'
                         : 'border-gray-200 bg-white text-[#0A111A] hover:border-[#0A111A]'

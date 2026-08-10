@@ -25,9 +25,11 @@ const nextConfig = {
   // Security headers — lost when the site moved from Netlify (netlify.toml)
   // to Vercel; restored here so they apply on every route.
   async headers() {
+    const isDev = process.env.NODE_ENV !== 'production';
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline'",
+      // Fast Refresh's dev runtime uses eval() to hot-reload — allow it only in dev.
+      `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''}`,
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: https:",
       "font-src 'self' data:",
