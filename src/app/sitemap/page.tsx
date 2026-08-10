@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Section, SectionHeading } from '@/components/ui/Section';
-import { getCareers, getPosts, getProjects, getServices } from '@/lib/content';
+import { getCareers, getCaseStudies, getPosts, getProjects, getServices } from '@/lib/content';
 import { siteConfig } from '@/lib/site';
 import { buildMetadata } from '@/lib/seo';
 
@@ -32,6 +32,7 @@ function LinkGroup({ title, links }: { title: string; links: Array<{ label: stri
 export default function SitemapPage() {
   const services = getServices();
   const projects = getProjects();
+  const caseStudies = getCaseStudies();
   const posts = getPosts();
   const careers = getCareers();
 
@@ -51,6 +52,8 @@ export default function SitemapPage() {
             { label: 'About', href: '/about' },
             { label: 'Services', href: '/services' },
             { label: 'Projects', href: '/projects' },
+            { label: 'Gallery', href: '/gallery' },
+            { label: 'Case Studies', href: '/case-studies' },
             { label: 'Team', href: '/team' },
             { label: 'Testimonials', href: '/testimonials' },
             { label: 'Blog', href: '/blog' },
@@ -68,6 +71,11 @@ export default function SitemapPage() {
         <LinkGroup
           title="Projects"
           links={projects.map((p) => ({ label: p.title, href: `/projects/${p.slug}` }))}
+        />
+
+        <LinkGroup
+          title="Case Studies"
+          links={caseStudies.map((cs) => ({ label: cs.title, href: `/case-studies/${cs.slug}` }))}
         />
 
         <LinkGroup

@@ -37,6 +37,24 @@ export interface Project {
   contentHtml?: string;
 }
 
+export interface CaseStudy {
+  slug: string;
+  title: string;
+  summary: string;
+  category: string;
+  location?: string;
+  year?: number;
+  client?: string;
+  cover?: string;
+  gallery?: string[];
+  challenge: string;
+  solution: string;
+  result: string;
+  featured?: boolean;
+  seo?: SeoMeta;
+  contentHtml?: string;
+}
+
 export interface Post {
   slug: string;
   title: string;

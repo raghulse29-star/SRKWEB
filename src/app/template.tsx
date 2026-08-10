@@ -25,7 +25,6 @@ export default function Template({ children }: { children: React.ReactNode }) {
     if (!root) return;
 
     const targets = Array.from(root.querySelectorAll<HTMLElement>('[data-reveal]'));
-    if (targets.length === 0) return;
 
     if (typeof IntersectionObserver === 'undefined') {
       targets.forEach((el) => el.classList.add('is-revealed'));
@@ -47,7 +46,26 @@ export default function Template({ children }: { children: React.ReactNode }) {
     );
 
     targets.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+
+    // Client-side interactions (filter toggles, tabs, etc.) can mount new
+    // [data-reveal] elements after this initial pass. Without watching for
+    // them, those elements never get observed and stay stuck at opacity:0
+    // forever, since the CSS above only reveals on .is-revealed.
+    const mutationObserver = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        mutation.addedNodes.forEach((node) => {
+          if (!(node instanceof HTMLElement)) return;
+          if (node.hasAttribute('data-reveal')) observer.observe(node);
+          node.querySelectorAll<HTMLElement>('[data-reveal]').forEach((el) => observer.observe(el));
+        });
+      }
+    });
+    mutationObserver.observe(root, { childList: true, subtree: true });
+
+    return () => {
+      observer.disconnect();
+      mutationObserver.disconnect();
+    };
   }, []);
 
   return (

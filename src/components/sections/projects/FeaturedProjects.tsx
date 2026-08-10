@@ -12,6 +12,14 @@ const projects = [
   { title: 'Residential Roof', category: 'Residential', image: '/images/ph18.webp' },
   { title: 'Metal System', category: 'Roofing', image: '/images/ph20.webp' },
   { title: 'Brick Structure', category: 'Industrial', image: '/images/ph19.webp' },
+  { title: 'Riverside Complex', category: 'Residential', image: '/images/ph16.webp' },
+  { title: 'Business Park Facade', category: 'Commercial', image: '/images/ph0.webp' },
+  { title: 'Heritage Roof Restoration', category: 'Roofing', image: '/images/ph22.webp' },
+  { title: 'Steel Frame Warehouse', category: 'Industrial', image: '/images/ph14.webp' },
+  { title: 'Hillside Villa', category: 'Residential', image: '/images/ph3.webp' },
+  { title: 'Tech Park Interiors', category: 'Commercial', image: '/images/ph1.webp' },
+  { title: 'Industrial Roof Deck', category: 'Roofing', image: '/images/ph21.webp' },
+  { title: 'Textile Plant Roofing', category: 'Industrial', image: '/images/ph15.webp' },
 ];
 
 const categories = ['All Projects', 'Residential', 'Commercial', 'Roofing', 'Industrial'];

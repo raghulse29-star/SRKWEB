@@ -1,14 +1,14 @@
 ---
 title: Lakeside Residence
 slug: lakeside-residence
-summary: A full metal-roof replacement and exterior renovation on a waterfront home.
+summary: A full metal-roof replacement and exterior renovation on a Puzhal lakefront home.
 category: Roofing
-location: Lakeside, ST
+location: Puzhal, Chennai, TN
 year: 2025
-cover: /images/projects/lakeside-cover.jpg
+cover: /images/ph0.webp
 gallery:
-  - /images/projects/lakeside-1.jpg
-  - /images/projects/lakeside-2.jpg
+  - /images/ph16.webp
+  - /images/ph19.webp
 featured: true
 seo:
   description: Lakeside Residence — full metal-roof replacement and exterior renovation by SKR Construction.
@@ -16,9 +16,9 @@ seo:
 
 ## Project overview
 
-The owners of this waterfront home needed a roof that could handle heavy weather without
-sacrificing the look of the property. We replaced the aging shingle roof with a
-standing-seam metal system and refreshed the exterior trim.
+The owners of this Puzhal lakefront home needed a roof that could handle the northeast
+monsoon without sacrificing the look of the property. We replaced the aging clay-tile
+roof with a standing-seam metal system and refreshed the exterior trim.
 
 ### Scope
 

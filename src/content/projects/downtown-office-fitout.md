@@ -2,13 +2,13 @@
 title: Downtown Office Fit-Out
 slug: downtown-office-fitout
 summary: A two-floor commercial fit-out delivered around an occupied building.
-category: Construction
-location: Your City, ST
+category: Commercial
+location: Guindy, Chennai, TN
 year: 2024
-cover: /images/projects/office-cover.jpg
+cover: /images/ph1.webp
 gallery:
-  - /images/projects/office-1.jpg
-  - /images/projects/office-2.jpg
+  - /images/ph20.webp
+  - /images/ph23.png
 featured: true
 seo:
   description: Downtown Office Fit-Out — two-floor commercial construction project by SKR Construction.

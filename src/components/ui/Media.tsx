@@ -9,7 +9,7 @@ import { cn } from '@/lib/cn';
  * into /public/images, flip ASSETS_READY to true and it renders optimized-layout
  * next/image (unoptimized loader, required for static export).
  */
-const ASSETS_READY = false;
+const ASSETS_READY = true;
 
 export function Media({
   src,

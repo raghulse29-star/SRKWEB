@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { MapPin, DraftingCompass, Clock, ClipboardCheck } from 'lucide-react';
@@ -12,7 +15,7 @@ const filters = ['All Projects', 'Industrial', 'Commercial'];
 const projects = [
   {
     title: 'Mega Industrial Warehouse',
-    // badge: 'Completed',
+    category: 'Industrial',
     badgeClass: 'bg-[#16A34A]',
     image: '/images/ph14.webp',
     imageFirst: true,
@@ -24,11 +27,24 @@ const projects = [
     ],
   },
   {
+    title: 'Coastal Business Park',
+    category: 'Commercial',
+    badgeClass: 'bg-[#0A111A]',
+    image: '/images/ph17.webp',
+    imageFirst: false,
+    specs: [
+      { icon: MapPin, label: 'Location', value: 'ECR, Chennai, TN' },
+      { icon: DraftingCompass, label: 'Scope of Work', value: 'Salt-Air-Rated Roofing, Cladding & Civil Works' },
+      { icon: Clock, label: 'Duration', value: '16 Months (2023)' },
+      { icon: ClipboardCheck, label: 'Status', value: 'Handover Complete' },
+    ],
+  },
+  {
     title: 'Textile Manufacturing Plant',
-    // badge: 'In Progress',
+    category: 'Industrial',
     badgeClass: 'bg-[#0A111A]',
     image: '/images/ph15.webp',
-    imageFirst: false,
+    imageFirst: true,
     specs: [
       { icon: MapPin, label: 'Location', value: 'Erode Industrial Zone, TN' },
       { icon: DraftingCompass, label: 'Scope of Work', value: 'Precision Roofing & Thermal Insulation Systems' },
@@ -36,9 +52,51 @@ const projects = [
       { icon: ClipboardCheck, label: 'Status', value: 'Erection Phase (70% Completed)' },
     ],
   },
+  {
+    title: 'Tech Park Commercial Complex',
+    category: 'Commercial',
+    badgeClass: 'bg-[#16A34A]',
+    image: '/images/ph20.webp',
+    imageFirst: false,
+    specs: [
+      { icon: MapPin, label: 'Location', value: 'Race Course, Coimbatore, TN' },
+      { icon: DraftingCompass, label: 'Scope of Work', value: 'Structural Framing, Glazing & Interior Fit-Out Shell' },
+      { icon: Clock, label: 'Duration', value: '18 Months (2022 - 2023)' },
+      { icon: ClipboardCheck, label: 'Status', value: 'Handover Complete' },
+    ],
+  },
+  {
+    title: 'Logistics Hub Warehouse',
+    category: 'Industrial',
+    badgeClass: 'bg-[#16A34A]',
+    image: '/images/ph5.webp',
+    imageFirst: true,
+    specs: [
+      { icon: MapPin, label: 'Location', value: 'Sriperumbudur, TN' },
+      { icon: DraftingCompass, label: 'Scope of Work', value: 'Pre-Engineered Steel Structure & Dock Yard Civil Works' },
+      { icon: Clock, label: 'Duration', value: '11 Months (2022)' },
+      { icon: ClipboardCheck, label: 'Status', value: 'Handover Complete' },
+    ],
+  },
+  {
+    title: 'Riverfront Convention Center',
+    category: 'Commercial',
+    badgeClass: 'bg-[#0A111A]',
+    image: '/images/ph18.webp',
+    imageFirst: false,
+    specs: [
+      { icon: MapPin, label: 'Location', value: 'Srirangam, Trichy, TN' },
+      { icon: DraftingCompass, label: 'Scope of Work', value: 'Long-Span Roofing, Structural Steel & Interior Finishing' },
+      { icon: Clock, label: 'Duration', value: '12 Months (2024)' },
+      { icon: ClipboardCheck, label: 'Status', value: 'Handover Complete' },
+    ],
+  },
 ];
 
 export function IndustrialLandmarks() {
+  const [active, setActive] = useState('All Projects');
+  const filtered = active === 'All Projects' ? projects : projects.filter((p) => p.category === active);
+
   return (
     <section className="w-full bg-[#F8F9FA] py-12 lg:py-16 font-sans">
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
@@ -54,24 +112,26 @@ export function IndustrialLandmarks() {
             </h2>
           </div>
           <div className="flex flex-wrap gap-3">
-            {filters.map((f, i) => (
-              <span
+            {filters.map((f) => (
+              <button
                 key={f}
-                className={`rounded-full border px-5 py-2 text-[13px] font-semibold ${
-                  i === 0
+                type="button"
+                onClick={() => setActive(f)}
+                className={`rounded-full border px-5 py-2 text-[13px] font-semibold transition-colors ${
+                  active === f
                     ? 'border-[#0A111A] bg-white text-[#0A111A]'
-                    : 'border-gray-200 bg-white text-gray-500'
+                    : 'border-gray-200 bg-white text-gray-500 hover:border-gray-400 hover:text-[#0A111A]'
                 }`}
               >
                 {f}
-              </span>
+              </button>
             ))}
           </div>
         </div>
 
         {/* Project cards */}
         <div className="mt-10 space-y-8">
-          {projects.map((p) => (
+          {filtered.map((p) => (
             <div
               key={p.title}
               data-reveal

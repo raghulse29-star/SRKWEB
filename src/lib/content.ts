@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import { markdownToHtml } from './markdown';
-import type { CareerPost, Post, Project, Service, TeamMember, Testimonial } from '@/types';
+import type { CareerPost, CaseStudy, Post, Project, Service, TeamMember, Testimonial } from '@/types';
 
 /**
  * Build-time content loaders. All functions read from src/content and run only on the
@@ -82,6 +82,22 @@ export async function getProject(slug: string): Promise<Project | null> {
   const item = readMarkdownCollection('projects').find((i) => i.slug === slug);
   if (!item) return null;
   return { slug, ...(item.data as object), contentHtml: await markdownToHtml(item.body) } as Project;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Case Studies                                                                */
+/* -------------------------------------------------------------------------- */
+
+export function getCaseStudies(): CaseStudy[] {
+  return readMarkdownCollection('case-studies')
+    .map(({ slug, data }) => ({ slug, ...(data as object) }) as CaseStudy)
+    .sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
+}
+
+export async function getCaseStudy(slug: string): Promise<CaseStudy | null> {
+  const item = readMarkdownCollection('case-studies').find((i) => i.slug === slug);
+  if (!item) return null;
+  return { slug, ...(item.data as object), contentHtml: await markdownToHtml(item.body) } as CaseStudy;
 }
 
 /* -------------------------------------------------------------------------- */

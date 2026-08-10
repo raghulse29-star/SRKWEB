@@ -3,12 +3,12 @@ title: Hillcrest Kitchen Remodel
 slug: hillcrest-kitchen
 summary: A dated kitchen reimagined as an open-plan living and cooking space.
 category: Renovation
-location: Hillcrest, ST
+location: Race Course, Coimbatore, TN
 year: 2024
-cover: /images/projects/kitchen-cover.jpg
+cover: /images/ph2.webp
 gallery:
-  - /images/projects/kitchen-1.jpg
-  - /images/projects/kitchen-2.jpg
+  - /images/ph24.png
+  - /images/ph25.png
 featured: false
 seo:
   description: Hillcrest Kitchen Remodel — open-plan kitchen renovation by SKR Construction.

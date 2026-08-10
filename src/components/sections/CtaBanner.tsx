@@ -45,12 +45,13 @@ export function CtaBanner() {
               Book A Consultation
             </Link>
             
-            <Link
-              href="/brochure"
+            <a
+              href="/brochure/SKR-Construction-Brochure.pdf"
+              download
               className="inline-flex w-full items-center justify-center rounded-md border border-white/10 bg-white/5 px-8 py-3.5 text-[14px] font-bold text-white transition-all duration-300 hover:bg-white/10"
             >
               Download Brochure
-            </Link>
+            </a>
           </div>
 
         </div>
