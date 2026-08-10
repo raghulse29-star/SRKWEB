@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { Section, SectionHeading } from '@/components/ui/Section';
 import { Card } from '@/components/ui/Card';
 import { Media } from '@/components/ui/Media';
@@ -24,21 +23,19 @@ export default function CaseStudiesPage() {
       />
       <div className="mt-12 grid gap-8 sm:grid-cols-2">
         {caseStudies.map((cs) => (
-          <Link key={cs.slug} href={`/case-studies/${cs.slug}`} className="group">
-            <Card className="h-full overflow-hidden transition-shadow hover:shadow-[var(--shadow-lifted)]">
-              <div className="relative aspect-[16/9]">
-                <Media src={cs.cover} alt={cs.title} className="h-full w-full" />
+          <Card key={cs.slug} className="h-full overflow-hidden">
+            <div className="relative aspect-video">
+              <Media src={cs.cover} alt={cs.title} className="h-full w-full" />
+            </div>
+            <div className="p-6">
+              <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wider text-accent">
+                <span>{cs.category}</span>
+                {cs.location ? <span className="text-muted-foreground">· {cs.location}</span> : null}
               </div>
-              <div className="p-6">
-                <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wider text-accent">
-                  <span>{cs.category}</span>
-                  {cs.location ? <span className="text-muted-foreground">· {cs.location}</span> : null}
-                </div>
-                <h3 className="mt-2 text-xl transition-colors group-hover:text-accent">{cs.title}</h3>
-                <p className="mt-2 text-muted-foreground">{cs.summary}</p>
-              </div>
-            </Card>
-          </Link>
+              <h3 className="mt-2 text-xl">{cs.title}</h3>
+              <p className="mt-2 text-muted-foreground">{cs.summary}</p>
+            </div>
+          </Card>
         ))}
       </div>
     </Section>
