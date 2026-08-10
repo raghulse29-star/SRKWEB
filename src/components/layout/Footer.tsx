@@ -90,8 +90,8 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-4">
                 <Mail className="h-5 w-5 flex-shrink-0 text-[#CF5B4B]" strokeWidth={1.5} />
-                <a href="mailto:info@srikumaranroofing.com" className="transition-colors hover:text-[#CF5B4B]">
-                  info@srikumaranroofing.com
+                <a href={`mailto:${siteConfig.contact.email}`} className="transition-colors hover:text-[#CF5B4B]">
+                  {siteConfig.contact.email}
                 </a>
               </li>
             </ul>

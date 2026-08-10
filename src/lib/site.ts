@@ -23,7 +23,7 @@ export const siteConfig = {
     phoneHref: 'tel:+919597179615',
     // Digits-only, no "+" — required format for wa.me links.
     whatsapp: '919597179615',
-    email: 'info@skrconstruction.com',
+    email: 'srikumaraner@gmail.com',
     address: {
       street: '21, T.M.N Street, Navalpur',
       locality: 'Ranipet',
@@ -61,8 +61,8 @@ export const siteConfig = {
     { label: 'Request a Quote', href: '/quote' },
   ],
 
-  // Default Open Graph image (place a real 1200x630 image at this path under /public).
-  ogImage: '/images/og-default.jpg',
+  // Default Open Graph / social-share image (square logo mark).
+  ogImage: '/images/logo1.png',
 } as const;
 
 export type SiteConfig = typeof siteConfig;

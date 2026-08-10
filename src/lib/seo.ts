@@ -39,7 +39,7 @@ export function buildMetadata({
       url,
       siteName: siteConfig.name,
       type,
-      images: [{ url: imageUrl, width: 1200, height: 630, alt: fullTitle }],
+      images: [{ url: imageUrl, width: 1200, height: 1200, alt: fullTitle }],
       ...(publishedTime ? { publishedTime } : {}),
     },
     twitter: {
