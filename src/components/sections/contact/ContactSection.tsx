@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
 import { useNetlifyForm } from '@/components/forms/useNetlifyForm';
+import { siteConfig } from '@/lib/site';
 
 /* ──────────────────────────────────────────────────────────────────────────
    CONTACT SECTION — Exact light-theme UI match from design
@@ -21,17 +22,20 @@ const infoCards = [
   {
     icon: MapPin,
     title: 'Our Office',
-    lines: ['21, T.M.N Street, Navalpur', 'Ranipet, Tamil Nadu 632401'],
+    lines: [
+      `${siteConfig.contact.address.street}`,
+      `${siteConfig.contact.address.locality}, Tamil Nadu ${siteConfig.contact.address.postalCode}`,
+    ],
   },
   {
     icon: Phone,
     title: 'Direct Line',
-    lines: ['+91 44 2456 7890', 'Mon-Sat: 9:00 AM - 7:00 PM'],
+    lines: [siteConfig.contact.phone, 'Mon-Sat: 8:00 AM - 6:00 PM'],
   },
   {
     icon: Mail,
     title: 'Email Us',
-    lines: ['consult@srikumaran.com', 'support@srikumaran.com'],
+    lines: [siteConfig.contact.email],
   },
 ];
 
